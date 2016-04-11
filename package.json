@@ -1,0 +1,29 @@
+{
+  "name": "omnibot",
+  "version": "1.0.0",
+  "description": "A Discord bot, with numerous functions.",
+  "main": "index.js",
+  "dependencies": {
+    "relations": "^0.5.0",
+    "discordie": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hedgehog1029/omnibot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "node"
+  ],
+  "author": "hedgehog1029 / offbeatwitch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hedgehog1029/omnibot/issues"
+  },
+  "homepage": "https://github.com/hedgehog1029/omnibot#readme"
+}
