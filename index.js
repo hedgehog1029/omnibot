@@ -7,7 +7,7 @@ var commandeer = require("./lib/commandeer.js"),
 	commands = require("./lib/commands.js"),
 	mods = require("./lib/mods.js");
 
-console.log("Starting OmniBot v0.1")
+console.log("Starting OmniBot v0.1");
 
 var config = JSON.parse(fs.readFileSync(__dirname + "/config/config.json", 'utf8'));
 var bot = new discordie();
@@ -21,7 +21,10 @@ bot.Dispatcher.on(discordie.Events.GATEWAY_READY, function(e) {
 
 	global.InviteManager = bot.Invites;
 	global.bot_id = bot.User.id;
+	global.bot = bot.User;
 	//bot.User.edit(null, null, fs.readFileSync("profile.png")); // temp profile update
+
+	mods.loader.load(commandeer);
 });
 
 bot.Dispatcher.on(discordie.Events.MESSAGE_CREATE, function(e) {
