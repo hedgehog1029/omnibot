@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,700);
+
+* {
+	margin: 0;
+}
+
+html, body {
+	width: 100%;
+	min-height: 100%;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	transition: color .25s;
+}
+
+a:hover {
+	color: #bbb;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid #bbb;
+}
+
+p.bold {
+	font-weight: bold;
+}
+
+p.inline {
+	display: inline;
+}
+
+p.inline > * {
+	display: inherit;
+}
+
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+}
+
+.page .menu {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 15%;
+	background: #222;
+	color: #fff;
+}
+
+.page .menu h2 {
+	position: relative;
+	font-size: 22px;
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #aaa;
+}
+
+.page .menu img.mob {
+	display: none;
+}
+
+.page .menu a {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+	padding: 10px;
+	color: #fff;
+	background: transparent;
+	transition: background .25s;
+}
+
+.page .menu a:hover {
+	background: #13a89e;
+}
+
+.page .menu a i {
+	margin-right: 10px;
+}
+
+.page .main {
+	position: absolute;
+	display: inline-block;
+	width: 85%;
+}
+
+.page .main .breadcrumb {
+	width: 100%;
+	height: 49px;
+	background: #222;
+}
+
+.page .main .breadcrumb h2 {
+	position: relative;
+	font-size: 22px;
+	text-align: left;
+	padding: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #fff;
+	text-overflow: ellipsis;
+}
+
+.page .main .content {
+	padding: 5px;
+}
+
+.sub.jukebox table.playlist {
+	padding: 0;
+	column-width: 100px;
+	border-spacing: 0;
+}
+
+.sub.jukebox table.playlist th {
+	border-bottom: 2px solid #bbb;
+	padding: 10px;
+	width: 250px;
+}
+
+.sub.jukebox table.playlist td {
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+}
+
+.sub.jukebox table.playlist th.small {
+	width: 64px;
+}
+
+.sub.jukebox a {
+	color: #111;
+	transition: color .25s;
+	cursor: pointer;
+}
+
+.sub.jukebox a:hover {
+	color: #777;
+}
+
+.page.splash {
+	background: url(../img/background.jpg);
+	background-size: cover;
+}
+
+.page.splash .header {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	text-shadow: 2px 2px 3px #111;
+	text-align: center;
+}
+
+.page.splash .header img {
+	width: 128px;
+	height: 128px;
+	border-radius: 64px;
+	box-shadow: 2px 2px 3px #111;
+}
+
+.page.splash .header h1 {
+	position: relative;
+	font-size: 72px;
+}
+
+.page.splash .header p {
+	position: relative;
+	font-size: 20px;
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+}
+
+.page.splash .header p .ticker {
+	position: relative;
+	display: inline-block;
+	transition: top 1s;
+	text-align: left;
+	width: 100px;
+}
+
+.page.splash .header a {
+	position: relative;
+	top: 30px;
+	padding: 10px 15px;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #111;
+	color: #fff;
+	background: transparent;
+	transition: color .25s, background .25s, text-shadow .25s;
+}
+
+.page.splash .header a:hover {
+	background: #fff;
+	color: #111;
+	text-shadow: none;
+}
+
+@media(max-width: 700px) {
+	.page.splash .header {
+		width: 100%;
+	}
+}
+
+@media(max-width: 800px) {
+	.page .main {
+		width: auto;
+		max-width: 100%;
+	}
+
+	.page .main .breadcrumb {
+		height: 36px;
+	}
+
+	.page .main .breadcrumb h2 {
+		padding: 4px 10px;
+	}
+
+	.page .menu {
+		width: 36px;
+	}
+
+	.page .menu h2 {
+		display: none;
+	}
+
+	.page .menu img.mob {
+		display: block;
+		width: 36px;
+		height: 36px;
+	}
+
+	.page .menu a span {
+		display: none;
+	}
+}
