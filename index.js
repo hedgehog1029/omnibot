@@ -8,7 +8,7 @@ var commandeer = require("./lib/commandeer.js"),
 	webserver = require("./lib/web/webserver.js"),
 	mods = require("./lib/mods.js");
 
-console.log("Starting OmniBot v0.1");
+console.log("[omni] Starting OmniBot v0.1");
 
 var config = JSON.parse(fs.readFileSync(__dirname + "/config/config.json", 'utf8'));
 var bot = new discordie();
@@ -18,7 +18,7 @@ bot.connect({
 });
 
 bot.Dispatcher.on(discordie.Events.GATEWAY_READY, function(e) {
-	console.log("OmniBot started. Username: " + bot.User.username);
+	console.log("[omni] OmniBot started. Username: " + bot.User.username);
 
 	global.InviteManager = bot.Invites;
 	global.bot_id = bot.User.id;

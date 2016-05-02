@@ -12,7 +12,8 @@ html, body {
 a {
 	color: #fff;
 	text-decoration: none;
-	transition: color .25s;
+	-webkit-transition: color .25s;
+	        transition: color .25s;
 }
 
 a:hover {
@@ -76,7 +77,8 @@ p.inline > * {
 	padding: 10px;
 	color: #fff;
 	background: transparent;
-	transition: background .25s;
+	-webkit-transition: background .25s;
+	        transition: background .25s;
 }
 
 .page .menu a:hover {
@@ -116,7 +118,9 @@ p.inline > * {
 
 .sub.jukebox table.playlist {
 	padding: 0;
-	column-width: 100px;
+	-webkit-column-width: 100px;
+	   -moz-column-width: 100px;
+	        column-width: 100px;
 	border-spacing: 0;
 }
 
@@ -138,7 +142,8 @@ p.inline > * {
 
 .sub.jukebox a {
 	color: #111;
-	transition: color .25s;
+	-webkit-transition: color .25s;
+	        transition: color .25s;
 	cursor: pointer;
 }
 
@@ -156,7 +161,9 @@ p.inline > * {
 	top: 40%;
 	left: 50%;
 	width: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	font-family: 'Montserrat', sans-serif;
 	color: #fff;
 	text-shadow: 2px 2px 3px #111;
@@ -183,12 +190,51 @@ p.inline > * {
 	width: 100%;
 }
 
-.page.splash .header p .ticker {
-	position: relative;
-	display: inline-block;
-	transition: top 1s;
-	text-align: left;
-	width: 100px;
+.page.splash div.ticker {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 24px;
+  top: 4px;
+  display: inline-block;
+  text-align: left;
+}
+
+.page.splash div.ticker ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page.splash div.ticker ul li {
+  width: auto;
+  position: relative;
+  top: 0em;
+}
+
+.page.splash div.ticker ul li.up {
+  -webkit-animation: up 1s;
+          animation: up 1s;
+}
+
+@-webkit-keyframes up {
+  0% {
+    top: 0em;
+  }
+  
+  100% {
+    top: -1.3em;
+  }
+}
+
+@keyframes up {
+  0% {
+    top: 0em;
+  }
+  
+  100% {
+    top: -1.3em;
+  }
 }
 
 .page.splash .header a {
@@ -200,7 +246,8 @@ p.inline > * {
 	box-shadow: 2px 2px 3px #111;
 	color: #fff;
 	background: transparent;
-	transition: color .25s, background .25s, text-shadow .25s;
+	-webkit-transition: color .25s, background .25s, text-shadow .25s;
+	        transition: color .25s, background .25s, text-shadow .25s;
 }
 
 .page.splash .header a:hover {
