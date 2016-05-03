@@ -116,6 +116,12 @@ p.inline > * {
 	padding: 5px;
 }
 
+.sub.jukebox h1 a {
+	float: right;
+	font-weight: 400;
+	font-size: 24px;
+}
+
 .sub.jukebox table.playlist {
 	padding: 0;
 	-webkit-column-width: 100px;
