@@ -18,8 +18,6 @@ bot.connect({
 });
 
 bot.Dispatcher.on(discordie.Events.GATEWAY_READY, function(e) {
-	console.log("[omni/CORE] OmniBot started. Username: " + bot.User.username);
-
 	global.InviteManager = bot.Invites;
 	global.bot_id = bot.User.id;
 	global.bot = bot.User;
@@ -27,6 +25,9 @@ bot.Dispatcher.on(discordie.Events.GATEWAY_READY, function(e) {
 	//bot.User.edit(null, null, fs.readFileSync("profile.png")); // temp profile update
 
 	mods.loader.load(commandeer);
+	webserver.start();
+
+	console.log("[omni/CORE] OmniBot started. Username: " + bot.User.username);
 });
 
 bot.Dispatcher.on(discordie.Events.MESSAGE_CREATE, function(e) {
